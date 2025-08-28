@@ -88,7 +88,6 @@ public struct Note: Sendable, Equatable, Hashable, Codable {
          if octave > 8 {
              return 127
          }
-         
          let octaveBounds = ((octave + 2) * 12) ... ((octave + 3) * 12)
          var note = Int(noteClass.letter.baseNote) + Int(noteClass.accidental.rawValue)
          if noteClass.letter == .B && noteClass.accidental.rawValue > 0 {
@@ -100,7 +99,6 @@ public struct Note: Sendable, Equatable, Hashable, Codable {
          while !octaveBounds.contains(note) {
              note += 12
          }
-         
          if note < 0 {
              return 0
          }

@@ -162,9 +162,8 @@ final class NoteTests: XCTestCase {
         let empty = NoteSet()
         XCTAssertNil(empty.first)
     }
-    
-    func testClampNoteBounds() {
 
+    func testClampNoteBounds() {
        let bMinus3 = Note(.B, octave: -3)
        XCTAssertEqual(bMinus3.noteNumber, 0)
        
